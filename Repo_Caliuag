@@ -1,0 +1,112 @@
+OpeningLeadCheats
+
+Building AI Course Project – Detecting Cheating in Bridge Opening Leads
+
+Project Title
+
+Building AI Course Project – Opening Lead Cheaters in Bridge
+
+Summary
+
+This project aims to develop an Artificial Intelligence (AI) system that analyzes opening leads in the card game Contract Bridge and detects unusual or suspicious lead decisions.
+
+The system will learn from historical bridge tournament data, particularly face-to-face tournaments before COVID-19, when online cheating was less of a concern.
+
+Using machine learning and anomaly detection, the AI will identify opening leads that differ significantly from normal playing patterns. These unusual leads will be further evaluated using a double-dummy solver to determine whether they produce better-than-expected results.
+
+The main objective is to help bridge analysts identify potentially suspicious players or partnerships for further investigation.
+
+Background
+
+Since the COVID-19 outbreak, face-to-face bridge tournaments were significantly reduced, and many competitions moved to online platforms such as Bridge Base Online (BBO).
+
+Unlike face-to-face bridge, online bridge has fewer opportunities to monitor players and prevent unauthorized communication. Consequently, several cheating cases have been discovered, while other cases remain suspected.
+
+One important area for detecting cheating is the opening lead. In bridge, the opening lead is the first card played by the defending side, and selecting the correct card can have a significant impact on the outcome of the game.
+
+Nicolas Hammond has developed a database and analytical approach using double-dummy analysis to evaluate opening leads. This project proposes a different approach: using AI to learn normal opening-lead behaviour and identify decisions that are statistically unusual.
+
+By comparing suspicious leads with normal playing patterns, the system could help identify players or partnerships whose decisions deserve closer examination.
+
+How is it used?
+
+The project will initially use historical bridge tournament data from face-to-face competitions before COVID-19.
+
+The data will be divided into training and testing datasets. Records involving players or partnerships convicted of cheating will be excluded from the training data.
+
+The AI model will learn the normal patterns of opening-lead decisions based on factors such as:
+
+- The cards held by the opening leader.
+- The bidding sequence.
+- The vulnerability.
+- The position of the players.
+- The contract and declarer.
+- The opening lead selected.
+
+After training, the model will analyze opening leads from online tournaments played after COVID-19.
+
+When the system identifies unusual opening leads, the corresponding deals will be sent to a double-dummy solver to evaluate their effectiveness.
+
+If the suspicious opening leads consistently produce better results than expected, this may indicate a pattern that deserves further investigation.
+
+The final results will be presented to bridge analysts, who can examine the flagged players or partnerships and decide whether additional investigation is necessary.
+
+Data Sources and AI Methods
+
+The primary data sources will be online bridge tournament archives, particularly Vugraph records from Bridge Base Online (BBO) and other available bridge platforms.
+
+The collected data should include:
+
+- The complete distribution of cards.
+- The bidding sequence.
+- The final contract.
+- The opening lead.
+- The complete play of the hand.
+- The result of the game.
+- Player and partnership information.
+
+The data collection process will involve harvesting historical tournament records and removing records associated with convicted cheats from the training dataset.
+
+The proposed AI methods include:
+
+1. Supervised Machine Learning
+
+The model will learn from historical opening-lead decisions to estimate which leads are most likely under normal playing conditions.
+
+2. Anomaly Detection
+
+The system will identify opening leads that have a low probability of occurring according to the learned model.
+
+3. Double-Dummy Analysis
+
+A double-dummy solver will evaluate the potential outcome of each flagged opening lead to determine whether it provides an unusually favourable result.
+
+4. Statistical Analysis
+
+The results will be compared across players and partnerships to identify patterns that may indicate suspicious behaviour.
+
+Challenges
+
+One of the main challenges is obtaining a sufficiently large and reliable dataset of historical bridge tournaments.
+
+Another challenge is that experienced bridge players sometimes make unusual but perfectly legitimate opening leads. Therefore, an unusual decision does not automatically indicate cheating.
+
+The system must also account for differences in playing styles, bidding conventions, experience levels, and tournament conditions.
+
+Furthermore, double-dummy analysis does not necessarily represent the information available to a player during an actual game, since it assumes that all players can see every card.
+
+Most importantly, the project will not automatically determine whether a player is cheating. Its purpose is to identify unusual patterns and provide useful information to human investigators.
+
+What Next?
+
+The next step would be to develop a working prototype using a sample of historical bridge tournament records.
+
+The prototype could first focus on training an anomaly-detection model using opening leads from face-to-face tournaments.
+
+Once the model demonstrates reliable results, it could be tested against online tournament data from the post-COVID period.
+
+In the long term, the system could complement Nicolas Hammond's existing analytical approach by providing an additional method for identifying suspicious opening leads.
+
+It could also be used for educational purposes, helping bridge players and researchers understand how expert players make opening-lead decisions.
+
+Ultimately, the project aims to create a fast and effective AI-assisted tool that helps bridge analysts detect unusual playing patterns and identify partnerships that may warrant further investigation.
